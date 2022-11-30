@@ -1,0 +1,511 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-top: 36px;
+
+    cursor: url(Cursor.png),auto;
+}
+
+@font-face {
+    font-family: areminiscentsmile;
+    src: url(areminiscentsmile-Regular.ttf);
+  }
+
+h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-style: normal;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 40px;
+    margin:0;
+}
+
+a, h5, h6 {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 40px;
+}
+
+a {
+    display: inline;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: url(Cursor-hover.png),auto;
+    text-decoration: none;
+}
+
+a:active {
+    cursor: url(Cursor-click.png),auto;
+}
+
+h1 {
+    font-size: 6vmax;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 4.5vmax;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 3.6vmax;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 2.7vmax;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+a, h5 {
+    font-weight: 400;
+}
+
+h6 {
+    font-weight: 500;
+    letter-spacing: 0.3em;
+}
+
+.h-alt {
+    font-family: areminiscentsmile;
+    font-weight: 400;
+    text-transform: none;
+}
+
+p {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-left: 40px;
+    margin:20px 0px;
+    margin-right:40px;
+}
+
+.p1 {
+    font-family: 'Space Mono';
+    font-size: 1.5vmax;
+}
+
+.p2 {
+    font-family: 'Space Grotesk';
+    font-size: 1.2vmax;
+}
+
+/* Navbar */
+.navbar {
+    border-bottom: solid #1E1C1C 1px;
+    padding: 1rem;
+    background-color: white;
+}
+
+.navbar-brand{
+    padding:0 0 0 12px;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.dropdown-item:active {
+    background-color:#D43425;
+}
+
+.dropdown-menu-dark{
+    background-color: #1E1C1C;
+}
+
+/* Marquee ref: https://www.youtube.com/watch?v=ZMCNin2VjxU */
+
+.marquee {
+    display: flex;
+    overflow: hidden;
+    gap: 0rem;
+    position: relative;
+    user-select: none;
+
+    background-color: #1E1C1C;
+}
+
+.marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 0rem;
+
+    color:white;
+}
+
+.marquee-content p{
+    margin: 12px 0px;
+}
+
+.marquee:hover div{
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 0rem));
+    }
+}
+
+.scroll {
+    animation: scroll 10s linear infinite;
+}
+
+
+/* Hero */
+
+.container-fluid{
+    padding:0px;
+}
+
+.col {
+    padding: 0;
+}
+
+.header {
+    padding: 40px 0px;
+    padding-right: 40px;
+}
+
+.social-icon {
+    margin-top: 20px;
+    color: #1E1C1C;
+}
+
+.social-icon:hover {
+    color: #B6B6B6;
+}
+
+.social-icon:active {
+    color: #D43425;
+}
+
+
+.title-image {
+    width: 100%;
+}
+
+/* Work */
+
+.work {
+    border-right: 1px solid #1E1C1C;
+    border-top: 1px solid #1E1C1C;
+}
+
+.cover {
+    max-width: 100%;
+}
+
+.img-link {
+    padding: 0;
+}
+
+/* reference: https://www.w3schools.com/howto/howto_css_image_overlay.asp*/
+.colorOverlay, .textOverlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.text {
+    color: white;
+    margin-top: 24px;
+}
+
+.container:hover .colorOverlay {
+    background-color: #1E1C1C;
+    opacity: 0.5;
+}
+
+
+.container:hover .textOverlay {
+    opacity: 1;
+}
+
+/* About Me */
+#about{
+    border-top: 1px solid #1E1C1C;
+}
+
+.banner{
+    max-height: 240px;
+}
+
+.name-col{
+    padding: 36px 0px;
+}
+
+.name{
+    display: inline;
+    font-size: 4vmax;
+}
+
+.name2{
+    color:#D43425;
+    padding-left:0px;
+}
+
+.name3{
+    padding-left:0;
+}
+
+.noSpace{
+    margin-bottom: 0px;
+}
+
+.banner-right{
+    float:right;
+}
+
+.col-text1 {
+    border-right: 1px solid #1E1C1C;
+    background-color: #F0F0F0;
+    padding-top: 24px;
+    padding-right: 40px;
+    border-top: 1px solid #1E1C1C;
+}
+
+.img-about{
+    float:right;
+    margin-bottom: 24px;
+    max-width: 160px;
+}
+
+.col-text2 {
+    border-top: 1px solid #1E1C1C;
+    padding: 0;
+}
+
+.block-h {
+    padding-top: 24px;
+}
+
+.block-p {
+    padding-right: 40px;
+}
+
+.btn-custom{
+    color:#1E1C1C;
+    border-top: 1px solid #1E1C1C;
+    text-align: center;
+    padding: 12px 40px;
+    display: block;
+    font-size: 3.6vmax;
+    font-weight: 500;
+}
+
+.btn-custom:hover{
+    background: #F0F0F0;
+    color:#1E1C1C;
+    text-decoration: none;
+}
+
+.btn-custom:active{
+    background: #D43425;
+    color:white;
+}
+
+.chart {
+    width: 100%;
+}
+
+/* Contact Section */
+.block-contact{
+    background-color: #D43425;
+    color: white;
+    padding-top: 24px;
+    border-right: 1px solid #1E1C1C;
+}
+
+/* .btn-custom-2{
+    color:white;
+    border-top: 1px solid white;
+    font-size: 3vmax;
+    text-align: left;
+}
+
+.btn-custom-2:hover{
+    background: #1E1C1C;
+    color:white;
+}
+
+.btn-custom-2:active{
+    background: white;
+    color:#1E1C1C;
+}
+*/
+
+.number {
+    margin-right: 40px;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.btn-custom-3{
+    border-top: 0px;
+    border-bottom: 1px solid #1E1C1C;
+    text-align: left;
+    font-size:3vmax;
+}
+
+.btn-custom-3:active{
+    background-color: #1E1C1C;
+}
+
+.message{
+    display: inline;
+    color:#B6B6B6;
+    font-size:2.5vmax;
+}
+
+.keepBrowsing{
+    padding:0;
+    color:#1E1C1C;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.keepBrowsing:hover{
+    color:#B6B6B6;
+    text-decoration:underline;
+}
+
+.stamp{
+    margin: 40px;
+    float: right;
+    max-width: 180px;
+}
+
+.block-links{
+    padding:0;
+}
+
+/* Footer */
+#footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #1E1C1C;
+}
+
+/* refernce: https://bootstrap-menu.com/detail-basic-hover.html */
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+@media (max-width: 992px) {
+    .stamp{
+        max-width: 140px;
+    }
+
+    .p1, .p2{
+        font-size: 14px;
+    }
+
+    .name{
+        font-size: 32px;
+    }
+}
+
+/* Work pages */
+
+.work-page-body{
+    background-color: #1E1C1C;
+    color:white;
+}
+
+.navbar-work{
+    border-bottom: solid #F0F0F0 1px;
+    background-color: #1E1C1C;
+    
+}
+
+.work-title{
+    padding: 24px 0px;
+    text-align: center;
+}
+
+.description{
+    margin-top:0;
+}
+
+.work-img{
+    width:100%;
+    margin-bottom: 32px;
+}
+
+.img-col{
+    padding: 0px 40px;
+}
+
+#details{
+    margin-top: 20px;
+}
+
+#footer2 {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+#footer-buttons{
+    padding-bottom: 1rem;
+}
+
+.work-buttons{
+    padding:0;
+    color:white;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.work-buttons:hover{
+    color:#B6B6B6;
+    text-decoration:underline;
+}
+
+.btn-custom-4{
+    color: white;
+    border: 1px solid white;
+    margin: 0px 40px 40px 40px;
+    text-align: center;
+    padding: 12px 40px;
+    font-size: 2vmax;
+    font-weight: 500;
+    display:block;
+}
+
+.btn-custom-4:hover{
+    background: #F0F0F0;
+    color:#1E1C1C;
+    text-decoration: none;
+}
+
+.btn-custom-4:active{
+    background: #D43425;
+    color:white;
+}
